@@ -233,4 +233,29 @@
         flex-direction:column;
     }
 
+    .menu-btn{
+        display:flex;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        background:rgba(20,20,20,.95);
+        flex-direction:column;
+        padding:20px 0;
+        gap:20px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav a{
+        text-align:center;
+        font-size:18px;
+    }
+
 }
