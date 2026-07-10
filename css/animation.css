@@ -1,0 +1,51 @@
+/*==============================
+        Scroll Animation
+==============================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+    transition:1s;
+
+}
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+    transition:1s;
+
+}
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    transition:1s;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translate(0) scale(1);
+
+}

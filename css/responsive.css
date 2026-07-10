@@ -1,0 +1,236 @@
+/*======================================
+        Smartphone (768px以下)
+======================================*/
+@media screen and (max-width:768px){
+
+    /* ---------- Header ---------- */
+
+    .header-container{
+        flex-direction:column;
+        height:auto;
+        padding:15px 0;
+    }
+
+    .logo{
+        margin-bottom:15px;
+    }
+
+    .logo img{
+        width:45px;
+        height:45px;
+    }
+
+    .logo-text h2{
+        font-size:22px;
+    }
+
+    .logo-text p{
+        font-size:11px;
+    }
+
+    nav{
+        justify-content:center;
+        gap:16px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero{
+        height:100vh;
+    }
+
+    .hero-content{
+        padding:110px 20px 40px;
+    }
+
+    .hero-subtitle{
+        font-size:12px;
+        letter-spacing:3px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+        line-height:1.3;
+        margin-bottom:20px;
+    }
+
+    .hero-description{
+        font-size:16px;
+        line-height:1.8;
+        max-width:100%;
+        margin-bottom:30px;
+    }
+
+    .hero-button{
+        padding:14px 35px;
+        font-size:15px;
+    }
+
+}
+
+/*======================================
+        Responsive (Tablet)
+======================================*/
+@media (max-width:992px){
+
+    .story-grid,
+    .exchange-row,
+    .people-grid,
+    .attraction-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .exchange-row.reverse{
+        direction:ltr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .timeline::before{
+        left:40px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+        flex-direction:column;
+        align-items:flex-start;
+        padding-left:90px;
+    }
+
+    .timeline-year{
+        left:40px;
+        width:80px;
+        height:80px;
+        font-size:18px;
+    }
+
+    .timeline-content{
+        width:100%;
+    }
+
+}
+
+/*======================================
+        Responsive (Smartphone)
+======================================*/
+@media (max-width:768px){
+
+    section{
+        padding:70px 20px;
+    }
+
+    /* Hero */
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-description{
+        font-size:16px;
+        line-height:1.8;
+        max-width:100%;
+    }
+
+    .hero-button{
+        padding:14px 35px;
+    }
+
+    /* Story */
+
+    .story-image img{
+        height:280px;
+    }
+
+    .story-text h3{
+        font-size:30px;
+    }
+
+    /* History */
+
+    .timeline-content{
+        padding:25px;
+    }
+
+    .timeline-content h3{
+        font-size:22px;
+    }
+
+    /* Attraction */
+
+    .attraction-card img{
+        height:220px;
+    }
+
+    .card-content h3{
+        font-size:24px;
+    }
+
+    /* Exchange */
+
+    .exchange-image img{
+        height:280px;
+    }
+
+    .exchange-text h3{
+        font-size:30px;
+    }
+
+    /* People */
+
+    .people-card img{
+        height:260px;
+    }
+
+    .people-content h3{
+        font-size:24px;
+    }
+
+    /* Festival */
+
+    .festival-content h2{
+        font-size:38px;
+    }
+
+    .festival-content p{
+        font-size:16px;
+    }
+
+    /* Gallery */
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:240px;
+    }
+
+    /* Ending */
+
+    .ending h2{
+        font-size:42px;
+    }
+
+    .ending p{
+        font-size:16px;
+    }
+
+    /* Footer */
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-left{
+        flex-direction:column;
+    }
+
+}

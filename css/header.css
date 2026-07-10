@@ -1,0 +1,269 @@
+/*======================================
+                HEADER
+======================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    transition:.4s;
+
+}
+
+.header-container{
+
+    width:min(1400px,95%);
+
+    margin:auto;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/*======================================
+                LOGO
+======================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+}
+
+.logo img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    background:white;
+
+    padding:5px;
+
+}
+
+.logo-text h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+.logo-text p{
+
+    font-size:13px;
+
+    opacity:.9;
+
+}
+
+/*======================================
+            NAVIGATION
+======================================*/
+
+nav{
+
+    display:flex;
+
+    gap:45px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+nav a{
+
+    position:relative;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#8fd8ff;
+
+    transform:translateX(-50%);
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+nav a:hover{
+
+    color:#8fd8ff;
+
+}
+
+nav a.active{
+
+    color:#8fd8ff;
+
+}
+
+nav a.active::after{
+
+    width:100%;
+
+}
+
+/*======================================
+        HEADER SCROLL
+======================================*/
+
+header.scrolled{
+
+    background:rgba(255,255,255,.96);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+header.scrolled .logo{
+
+    color:#183b56;
+
+}
+
+header.scrolled nav a{
+
+    color:#183b56;
+
+}
+
+header.scrolled nav a:hover{
+
+    color:#0099cc;
+
+}
+
+header.scrolled nav a.active{
+
+    color:#0099cc;
+
+}
+
+/*======================================
+            MENU BUTTON
+======================================*/
+
+.menu-btn{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    cursor:pointer;
+
+}
+
+.menu-btn span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:10px;
+
+}
+
+header.scrolled .menu-btn span{
+
+    background:#183b56;
+
+}
+
+/*======================================
+        HEADER ANIMATION
+======================================*/
+
+header{
+
+    animation:headerFade .8s ease;
+
+}
+
+@keyframes headerFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
