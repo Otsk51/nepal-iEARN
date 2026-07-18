@@ -922,8 +922,9 @@
 
 .people-grid{
 
-    display:block;
-
+    display:grid;
+    grid-template-columns:1fr;
+    gap:45px;
 }
 
 .people-card{
