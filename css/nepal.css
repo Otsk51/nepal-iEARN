@@ -968,6 +968,8 @@
 
     width:100%;
 
+    max-width:none;
+
     height:340px;
 
     object-fit:cover;
