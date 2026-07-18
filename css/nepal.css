@@ -943,9 +943,9 @@
 
 .people-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-8px);
 
-    box-shadow:0 30px 60px rgba(0,0,0,.15);
+    box-shadow:0 25px 40px rgba(0,0,0,.15);
 
 }
 
