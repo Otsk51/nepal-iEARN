@@ -660,19 +660,7 @@
 
 
 
-/*======================================
-            DECORATION
-======================================*/
 
-.story::before{
-
-    content:"";
-
-    position:absolute;
-
-    display:none;
-
-}
 
 /*======================================
             ATTRACTION
@@ -934,11 +922,7 @@
 
 .people-grid{
 
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:45px;
+    display:block;
 
 }
 
@@ -1300,11 +1284,7 @@ footer{
             LIGHTBOX
 ======================================*/
 
-.gallery-grid img{
 
-    position:relative;
-
-}
 
 .gallery-grid img:hover{
 

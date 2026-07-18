@@ -22,11 +22,13 @@ header{
 
     transition:.4s;
 
+    animation:headerFade .8s ease;
+
 }
 
 .header-container{
 
-    width:min(1400px,95%);
+    width:min(1200px,90%);
 
     margin:auto;
 
@@ -116,7 +118,7 @@ nav a{
 
     font-weight:500;
 
-    transition:.3s;
+    transition:color .3s ease;
 
     white-space:nowrap;
 
@@ -144,29 +146,20 @@ nav a::after{
 
 }
 
-nav a:hover::after{
+nav a:hover::after,
+nav a.active::after{
 
     width:100%;
 
 }
 
-nav a:hover{
-
-    color:#8fd8ff;
-
-}
-
+nav a:hover,
 nav a.active{
 
     color:#8fd8ff;
 
 }
 
-nav a.active::after{
-
-    width:100%;
-
-}
 
 /*======================================
         HEADER SCROLL
@@ -192,17 +185,13 @@ header.scrolled nav a{
 
 }
 
-header.scrolled nav a:hover{
-
-    color:#0099cc;
-
-}
-
+header.scrolled nav a:hover,
 header.scrolled nav a.active{
 
     color:#0099cc;
 
 }
+
 
 /*======================================
             MENU BUTTON
@@ -226,7 +215,7 @@ header.scrolled nav a.active{
 
     height:3px;
 
-    background:white;
+    background:#183b56;
 
     border-radius:10px;
 
@@ -241,12 +230,6 @@ header.scrolled .menu-btn span{
 /*======================================
         HEADER ANIMATION
 ======================================*/
-
-header{
-
-    animation:headerFade .8s ease;
-
-}
 
 @keyframes headerFade{
 

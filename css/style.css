@@ -1,8 +1,3 @@
-/*======================================
-            GOOGLE FONT
-======================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /*======================================
             RESET
@@ -38,6 +33,8 @@ img{
 
     width:100%;
 
+    height:auto;
+    
     display:block;
 
 }
@@ -139,7 +136,7 @@ ul{
 
     font-weight:600;
 
-    transition:.35s;
+    transition: all .35s ease;
 
 }
 
@@ -152,46 +149,6 @@ ul{
 
 }
 
-/*======================================
-            CARD
-======================================*/
-
-.attraction-card,
-.people-card{
-
-    background:#fff;
-
-    border-radius:24px;
-
-    overflow:hidden;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.4s;
-
-}
-
-.attraction-card:hover,
-.people-card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:0 25px 45px rgba(0,0,0,.15);
-
-}
-
-/*======================================
-          IMAGE STYLE
-======================================*/
-
-.attraction-card img,
-.people-card img{
-
-    height:260px;
-
-    object-fit:cover;
-
-}
 
 /*======================================
           SECTION SPACING

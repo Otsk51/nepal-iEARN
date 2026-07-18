@@ -37,16 +37,12 @@
         font-size:14px;
     }
 
-    html{
-        overflow-x:hidden;
-    }
 
     body{
         overflow-x:hidden;
     }
     
     img{
-        max-width:100%;
         height:auto;
     }
 
@@ -98,6 +94,13 @@
     .people-grid,
     .attraction-grid{
         gap:25px;
+        grid-template-columns:1fr;
+    }
+
+    .exchange-row{
+
+    grid-template-columns:1fr;
+
     }
 
     .exchange-row.reverse{
@@ -138,10 +141,6 @@
 @media (max-width:768px){
     
     section{
-        min-height:100vh;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
         padding:70px 20px;
     }
 
@@ -150,18 +149,6 @@
         font-size:30px;
     }
 
-
-    /* Hero */
-
-    .hero-content h1{
-        font-size:34px;
-    }
-
-    .hero-description{
-        font-size:16px;
-        line-height:1.8;
-        max-width:100%;
-    }
 
 
     /* Story */
@@ -217,6 +204,7 @@
         max-width:none;
         height:230px;
         object-fit:cover;
+        grid-template-columns:1fr;
     }
 
     .people-content h3{
