@@ -204,6 +204,7 @@
         max-width:none;
         height:230px;
         object-fit:cover;
+        grid-template-columns:1fr;
     }
 
     .people-content h3{
@@ -291,4 +292,3 @@
     }
 
 }
-
