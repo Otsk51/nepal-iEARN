@@ -293,7 +293,13 @@
 }
 
 @media (max-width:768px){
-    *{
-        outline:1px solid red;
+
+    .fade-left{
+        transform:translateX(-30px);
     }
+
+    .fade-right{
+        transform:translateX(30px);
+    }
+
 }
