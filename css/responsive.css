@@ -204,7 +204,6 @@
         max-width:none;
         height:230px;
         object-fit:cover;
-        grid-template-columns:1fr;
     }
 
     .people-content h3{
@@ -291,4 +290,10 @@
         font-size:18px;
     }
 
+}
+
+@media (max-width:768px){
+    *{
+        outline:1px solid red;
+    }
 }
