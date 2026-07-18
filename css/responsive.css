@@ -213,7 +213,7 @@
     /* People */
 
     .people-card img{
-        width:100%;
+        width:150px;
         height:230px;
         object-fit:cover;
     }
