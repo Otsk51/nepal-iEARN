@@ -50,6 +50,8 @@
 
     .hero{
         height:100vw;
+        padding-top:90px;
+        box-sizing:border-box;
     }
 
     .hero-content{
