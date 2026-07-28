@@ -107,9 +107,9 @@ nav a{
 ======================================*/
 
 .hero{
-    margin-top:90px;
-    min-height:calc(100vh - 90px);
-    height:auto;
+    margin-top:0px;
+    min-height:100svh;
+    height:100svh;
 }
 
 .hero-content{
