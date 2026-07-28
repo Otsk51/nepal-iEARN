@@ -89,11 +89,11 @@ window.addEventListener("scroll",()=>{
     });
 
     const menuBtn = document.getElementById("menuBtn");
-
     const navMenu = document.getElementById("navMenu");
 
-    menuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
+    menuBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
+    navMenu.classList.toggle("active");
 });
