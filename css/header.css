@@ -92,6 +92,15 @@ header{
 
 }
 
+/* スクロール後のロゴ文字 */
+header.scrolled .logo-text h2 {
+    color: #183b56;
+}
+
+header.scrolled .logo-text p {
+    color: #183b56;
+}
+
 /*======================================
             NAVIGATION
 ======================================*/
