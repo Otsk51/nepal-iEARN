@@ -449,3 +449,20 @@ nav a{
 }
 
 }
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    #navMenu {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+
+    #navMenu a {
+        font-size: 12px;
+    }
+}

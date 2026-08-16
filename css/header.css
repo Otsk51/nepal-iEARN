@@ -252,3 +252,21 @@ header.scrolled .menu-btn span{
     }
 
 }
+
+/* ハンバーガーボタンを非表示 */
+.menu-btn {
+    display: none;
+}
+
+/* ナビゲーションを横並び */
+#navMenu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* メニュー項目 */
+#navMenu a {
+    display: block;
+    white-space: nowrap;
+}
