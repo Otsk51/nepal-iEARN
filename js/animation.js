@@ -11,14 +11,20 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
 
         if (entry.isIntersecting) {
+
             entry.target.classList.add("show");
+
+            // 一度表示したら監視を終了
+            observer.unobserve(entry.target);
+
         }
 
     });
 
 }, {
-    threshold: 0.15
+    threshold: 0.1
 });
+
 
 animatedItems.forEach(item => {
     observer.observe(item);
@@ -26,10 +32,12 @@ animatedItems.forEach(item => {
 
 
 //==============================
-// Stagger Gallery Animation
+// Gallery Animation
 //==============================
 
-const galleryItems = document.querySelectorAll(".gallery-grid img");
+const galleryItems = document.querySelectorAll(
+    ".gallery-grid img"
+);
 
 galleryItems.forEach((img, index) => {
 
@@ -39,10 +47,10 @@ galleryItems.forEach((img, index) => {
 
 
 //==============================
-// Gallery Hover Zoom
+// Gallery Hover
+// PC only
 //==============================
 
-// PCだけホバー拡大
 if (window.matchMedia("(min-width: 769px)").matches) {
 
     galleryItems.forEach(img => {
@@ -57,15 +65,4 @@ if (window.matchMedia("(min-width: 769px)").matches) {
 
     });
 
-}
-
-
-//==============================
-// Festival Fade
-//==============================
-
-const festival = document.querySelector(".festival");
-
-if (festival) {
-    observer.observe(festival);
 }

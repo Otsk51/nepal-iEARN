@@ -228,3 +228,48 @@ header.scrolled #navMenu a::after {
         background: rgba(255, 255, 255, .97);
     }
 }
+
+/*======================================
+        SMARTPHONE HEADER
+======================================*/
+
+@media (max-width: 768px) {
+
+    .header-container {
+        width: 90%;
+        min-height: 65px;
+
+        justify-content: flex-start;
+    }
+
+    /* ロゴだけ表示 */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text h2 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+    }
+
+    /* スマホではナビを完全に非表示 */
+    #navMenu {
+        display: none !important;
+    }
+
+    /* ハンバーガーも表示しない */
+    .menu-btn {
+        display: none !important;
+    }
+
+}

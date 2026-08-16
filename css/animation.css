@@ -50,3 +50,51 @@
 
 }
 
+/*======================================
+        SMARTPHONE ANIMATION
+======================================*/
+
+@media (max-width: 768px) {
+
+    .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+            opacity .8s ease,
+            transform .8s ease;
+    }
+
+    .fade-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition:
+            opacity .8s ease,
+            transform .8s ease;
+    }
+
+    .fade-right {
+        opacity: 0;
+        transform: translateX(30px);
+        transition:
+            opacity .8s ease,
+            transform .8s ease;
+    }
+
+    .zoom {
+        opacity: 0;
+        transform: scale(.96);
+        transition:
+            opacity .8s ease,
+            transform .8s ease;
+    }
+
+    /* 表示されたら元の位置へ */
+    .fade-up.show,
+    .fade-left.show,
+    .fade-right.show,
+    .zoom.show {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+
+}
