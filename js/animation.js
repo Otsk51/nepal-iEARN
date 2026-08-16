@@ -48,7 +48,7 @@ galleryItems.forEach((img, index) => {
 
 //==============================
 // Gallery Hover
-// PC only
+// PC ONLY
 //==============================
 
 if (window.matchMedia("(min-width: 769px)").matches) {
@@ -65,4 +65,15 @@ if (window.matchMedia("(min-width: 769px)").matches) {
 
     });
 
+}
+
+
+//==============================
+// Festival Fade
+//==============================
+
+const festival = document.querySelector(".festival");
+
+if (festival) {
+    observer.observe(festival);
 }

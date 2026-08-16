@@ -511,3 +511,102 @@
         transform: scale(.96);
     }
 }
+
+/*======================================
+        SMARTPHONE ONLY
+======================================*/
+
+@media (max-width: 768px) {
+
+    /*--------------------------------
+            HEADER
+    --------------------------------*/
+
+    .header-container {
+        width: 90%;
+        min-height: 65px;
+
+        justify-content: flex-start;
+    }
+
+    /* ロゴだけ表示 */
+    #navMenu {
+        display: none !important;
+    }
+
+    .menu-btn {
+        display: none !important;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text h2 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+    }
+
+
+    /*--------------------------------
+        HORIZONTAL OVERFLOW 防止
+    --------------------------------*/
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section,
+    .container {
+        max-width: 100%;
+    }
+
+
+    /*--------------------------------
+            ANIMATION FIX
+    --------------------------------*/
+
+    .fade-up.show,
+    .fade-left.show,
+    .fade-right.show,
+    .zoom.show {
+        opacity: 1 !important;
+
+        transform:
+            translateX(0)
+            translateY(0)
+            scale(1) !important;
+    }
+
+
+    /* 初期位置 */
+    .fade-left {
+        transform: translateX(-30px);
+    }
+
+    .fade-right {
+        transform: translateX(30px);
+    }
+
+    .fade-up {
+        transform: translateY(30px);
+    }
+
+    .zoom {
+        transform: scale(.96);
+    }
+
+}
