@@ -1,468 +1,513 @@
 /*======================================
-        Responsive (Smartphone)
+        RESPONSIVE
+        Smartphone First
 ======================================*/
-@media screen and (max-width:768px){
-
-/*======================================
-                COMMON
-======================================*/
-
-body{
-    overflow-x:hidden;
-}
-
-section{
-    padding:80px 20px;
-}
-
-.container{
-    width:92%;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-.section-title{
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:32px;
-}
-
-.section-title p{
-    font-size:15px;
-    line-height:1.8;
-}
-
-/*======================================
-                HEADER
-======================================*/
-
-header{
-    padding-top:env(safe-area-inset-top);
-    z-index:9999;
-}
-
-.header-container{
-    min-height:90px;
-    padding:15px 0;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    gap:12px;
-}
-
-.logo img{
-    width:45px;
-    height:45px;
-}
-
-.logo-text h2{
-    font-size:20px;
-}
-
-.logo-text p{
-    font-size:10px;
-}
-
-.menu-btn{
-    display:flex;
-    z-index:10000;
-}
-
-nav{
-    display:none;
-
-    position:absolute;
-    top:90px;
-    left:0;
-
-    width:100%;
-
-    background:rgba(20,20,20,.96);
-
-    flex-direction:column;
-    align-items:center;
-    gap:22px;
-
-    padding:25px 0;
-
-    z-index:9999;
-}
-
-nav.active{
-    display:flex;
-}
-
-nav a{
-    font-size:18px;
-}
-
-/*======================================
-                HERO
-======================================*/
-
-.hero{
-    margin-top:0px;
-    min-height:100svh;
-    height:100svh;
-}
-
-.hero-content{
-    padding:40px 20px;
-    min-height:calc(100vh - 90px);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.hero-subtitle{
-    font-size:12px;
-    letter-spacing:3px;
-}
-
-.hero-content h1{
-    font-size:34px;
-    line-height:1.3;
-    margin-bottom:20px;
-}
-
-.hero-description{
-    font-size:16px;
-    line-height:1.8;
-    margin-bottom:30px;
-}
-
-.hero-button{
-    padding:14px 35px;
-    font-size:15px;
-}
-
-.scroll-down{
-    bottom:20px;
-}
-
-.mouse{
-    width:24px;
-    height:40px;
-}
-
-/*======================================
-        STORY
-======================================*/
-
-.story-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:35px;
-    align-items:center;
-}
-
-.story-image img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
-
-.story-text{
-    text-align:center;
-}
-
-.story-text h3{
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.story-text p{
-    font-size:16px;
-    line-height:1.9;
-}
-
-/*======================================
-        MESSAGE
-======================================*/
-
-.message{
-    padding:90px 20px;
-}
-
-.message-small{
-    font-size:12px;
-    letter-spacing:3px;
-}
-
-.message h2{
-    font-size:34px;
-    margin-bottom:25px;
-}
-
-.message h3{
-    font-size:24px;
-    line-height:1.6;
-}
-
-/*======================================
-        HISTORY
-======================================*/
-
-.timeline{
-    max-width:100%;
-}
-
-.timeline::before{
-    left:25px;
-    transform:none;
-}
-
-.timeline-item,
-.timeline-item:nth-child(even){
-    flex-direction:column;
-    align-items:flex-start;
-    margin-bottom:60px;
-    padding-left:70px;
-}
-
-.timeline-year{
-    left:25px;
-    transform:translateX(-50%);
-    width:70px;
-    height:70px;
-    font-size:16px;
-}
-
-.timeline-content{
-    width:100%;
-    padding:25px;
-}
-
-.timeline-content h3{
-    font-size:22px;
-}
-
-.timeline-content p{
-    font-size:15px;
-    line-height:1.8;
-}
-
-/*======================================
-        ATTRACTION
-======================================*/
-
-.attraction-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:30px;
-}
-
-.attraction-card img{
-    height:220px;
-}
-
-.card-content{
-    padding:22px;
-}
-
-.card-content h3{
-    font-size:24px;
-}
-
-.card-content p{
-    font-size:15px;
-    line-height:1.8;
-}
-
-/*======================================
-        EXCHANGE
-======================================*/
-
-.exchange-row{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:35px;
-    margin-bottom:80px;
-}
-
-.exchange-row.reverse{
-    direction:ltr;
-}
-
-.exchange-image img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
-
-.exchange-text{
-    text-align:center;
-}
-
-.exchange-text span{
-    font-size:12px;
-    letter-spacing:2px;
-}
-
-.exchange-text h3{
-    font-size:28px;
-    margin:15px 0;
-}
-
-.exchange-text p{
-    font-size:16px;
-    line-height:1.9;
-}
-
-/*======================================
-        PEOPLE
-======================================*/
-
-.people-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:30px;
-}
-
-.people-card img{
-    height:240px;
-}
-
-.people-content{
-    padding:25px;
-}
-
-.people-content h3{
-    font-size:24px;
-}
-
-.people-content p{
-    font-size:15px;
-    line-height:1.8;
-}
-
-/*======================================
-        FESTIVAL
-======================================*/
-
-.festival{
-    padding:100px 20px;
-}
-
-.festival-content span{
-    font-size:12px;
-    letter-spacing:3px;
-}
-
-.festival-content h2{
-    font-size:38px;
-    margin:20px 0;
-}
-
-.festival-content p{
-    font-size:16px;
-    line-height:1.9;
-}
-
-.festival-button{
-    padding:14px 35px;
-    font-size:15px;
-}
-
-/*======================================
-        GALLERY
-======================================*/
-
-.gallery-grid{
-    display:flex;
-    gap:15px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding-bottom:10px;
-
-    scrollbar-width:none;
-}
-
-.gallery-grid::-webkit-scrollbar{
-    display:none;
-}
-
-.gallery-grid img{
-    width:240px;
-    min-width:240px;
-    height:240px;
-    object-fit:cover;
-    scroll-snap-align:center;
-}
-
-/*======================================
-        ENDING
-======================================*/
-
-.ending h2{
-    font-size:40px;
-}
-
-.ending p{
-    font-size:16px;
-    line-height:1.9;
-}
-
-/*======================================
-        FOOTER
-======================================*/
-
-.footer-container{
-    flex-direction:column;
-    text-align:center;
-    gap:30px;
-}
-
-.footer-left{
-    flex-direction:column;
-    gap:15px;
-}
-
-.footer-left img{
-    width:55px;
-}
-
-.footer-left h3{
-    font-size:22px;
-}
-
-.footer-right{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.copyright{
-    margin-top:30px;
-    font-size:13px;
-}
-
-}
 
 @media (max-width: 768px) {
-    .menu-btn {
+
+    /*======================================
+                    COMMON
+    ======================================*/
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+        font-size: 15px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title span {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+        line-height: 1.4;
+        margin: 10px 0;
+    }
+
+    .section-title p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /*======================================
+                    HEADER
+    ======================================*/
+
+    .header-container {
+        min-height: 64px;
+    }
+
+
+    /*======================================
+                    HERO
+    ======================================*/
+
+    .hero {
+        height: 100svh;
+        min-height: 620px;
+    }
+
+    .hero-content {
+        height: 100%;
+        min-height: 0;
+
+        padding: 80px 10px 60px;
+
+        justify-content: center;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 31px;
+        line-height: 1.35;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        max-width: 340px;
+
+        font-size: 14px;
+        line-height: 1.9;
+
+        margin-bottom: 10px;
+    }
+
+    .hero-description br {
         display: none;
     }
 
-    #navMenu {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        flex-wrap: nowrap;
+    .hero-button {
+        padding: 13px 30px;
+        font-size: 14px;
     }
 
-    #navMenu a {
+    .scroll-down {
+        bottom: 15px;
+    }
+
+    .scroll-down span {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .mouse {
+        width: 22px;
+        height: 36px;
+    }
+
+
+    /*======================================
+                    STORY
+    ======================================*/
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .story-image img {
+        height: 240px;
+        border-radius: 18px;
+    }
+
+    .story-text {
+        text-align: left;
+    }
+
+    .story-text h3 {
+        font-size: 25px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .story-text p {
+        font-size: 14px;
+        line-height: 1.9;
+        margin-bottom: 18px;
+    }
+
+
+    /*======================================
+                    MESSAGE
+    ======================================*/
+
+    .message {
+        padding: 80px 20px;
+    }
+
+    .message-small {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .message h2 {
+        font-size: 27px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+    .message h3 {
+        font-size: 21px;
+        line-height: 1.7;
+    }
+
+
+    /*======================================
+                    HISTORY
+    ======================================*/
+
+    .timeline {
+        width: 100%;
+    }
+
+    .timeline::before {
+        left: 25px;
+        width: 3px;
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        display: block;
+
+        margin-bottom: 50px;
+        padding-left: 55px;
+    }
+
+    .timeline-year {
+        left: 25px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 11px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    .timeline-content h3 {
+        font-size: 19px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+
+    /*======================================
+                ATTRACTIONS
+    ======================================*/
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .attraction-card {
+        border-radius: 18px;
+    }
+
+    .attraction-card img {
+        height: 210px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /*======================================
+                    FESTIVAL
+    ======================================*/
+
+    .festival {
+        padding: 80px 20px;
+    }
+
+    .festival-content span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .festival-content h2 {
+        font-size: 35px;
+        line-height: 1.3;
+        margin: 18px 0;
+    }
+
+    .festival-content p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .festival-button {
+        padding: 13px 28px;
+        font-size: 14px;
+    }
+
+
+    /*======================================
+                    EXCHANGE
+    ======================================*/
+
+    .exchange-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        margin-bottom: 70px;
+    }
+
+    .exchange-row.reverse {
+        direction: ltr;
+    }
+
+    .exchange-image {
+        border-radius: 18px;
+    }
+
+    .exchange-image img {
+        height: 240px;
+    }
+
+    .exchange-text {
+        text-align: left;
+    }
+
+    .exchange-text span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .exchange-text h3 {
+        font-size: 25px;
+        line-height: 1.5;
+        margin: 10px 0 18px;
+    }
+
+    .exchange-text p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+
+    /*======================================
+                    PEOPLE
+    ======================================*/
+
+    .people-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .people-card {
+        border-radius: 18px;
+    }
+
+    .people-card img {
+        height: 230px;
+    }
+
+    .people-content {
+        padding: 22px;
+    }
+
+    .people-content span {
+        font-size: 10px;
+    }
+
+    .people-content h3 {
+        font-size: 21px;
+        line-height: 1.5;
+    }
+
+    .people-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /*======================================
+                    GALLERY
+    ======================================*/
+
+    .gallery-grid {
+        display: flex;
+
+        gap: 12px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding: 5px 0 12px;
+
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-grid img {
+        flex: 0 0 210px;
+
+        width: 210px;
+        height: 210px;
+
+        border-radius: 14px;
+
+        scroll-snap-align: center;
+    }
+
+
+    /*======================================
+                    ENDING
+    ======================================*/
+
+    .ending {
+        padding: 80px 20px;
+    }
+
+    .ending h2 {
+        font-size: 39px;
+        line-height: 1.3;
+    }
+
+    .ending p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+
+    /*======================================
+                    FOOTER
+    ======================================*/
+
+    footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-left img {
+        width: 55px;
+    }
+
+    .footer-left h3 {
+        font-size: 21px;
+    }
+
+    .footer-left p {
         font-size: 12px;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 22px;
+    }
+
+    .footer-right a {
+        font-size: 13px;
+    }
+
+    .copyright {
+        margin-top: 30px;
+        font-size: 11px;
+    }
+
+
+    /*======================================
+                TOP BUTTON
+    ======================================*/
+
+    #topButton {
+        right: 15px;
+        bottom: 15px;
+
+        width: 45px;
+        height: 45px;
+
+        font-size: 18px;
+    }
+
+
+    /*======================================
+                ANIMATION
+    ======================================*/
+
+    .fade-left {
+        transform: translateX(-30px);
+    }
+
+    .fade-right {
+        transform: translateX(30px);
+    }
+
+    .fade-up {
+        transform: translateY(30px);
+    }
+
+    .zoom {
+        transform: scale(.96);
     }
 }

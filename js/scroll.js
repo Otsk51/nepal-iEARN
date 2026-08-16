@@ -2,45 +2,45 @@
 // Smooth Scroll
 //==============================
 
-const navItems = document.querySelectorAll('nav a, .hero-button');
+const navItems = document.querySelectorAll(
+    "#navMenu a, .hero-button"
+);
 
-navItems.forEach(item=>{
+navItems.forEach(item => {
 
-    item.addEventListener("click",function(e){
+    item.addEventListener("click", function(e) {
 
         const href = this.getAttribute("href");
 
-        // 外部ページ(index.htmlなど)はそのまま遷移
-        if(!href.startsWith("#")) return;
-
-        e.preventDefault();
+        // #から始まらないリンクは通常通り
+        if (!href || !href.startsWith("#")) {
+            return;
+        }
 
         const target = document.querySelector(href);
 
-        if(!target) return;
+        if (!target) {
+            return;
+        }
 
-        // ヘッダーの高さを取得
-        const headerHeight = document.querySelector("header").offsetHeight;
+        e.preventDefault();
 
-        // スクロール位置を計算
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.offsetHeight : 0;
+
         const targetPosition =
-            target.getBoundingClientRect().top
-            + window.pageYOffset
-            - headerHeight
-            - 0;
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight;
 
         window.scrollTo({
-
-            top:targetPosition,
-
-            behavior:"smooth"
-
+            top: targetPosition,
+            behavior: "smooth"
         });
 
     });
 
 });
-
 
 
 //==============================
@@ -49,52 +49,25 @@ navItems.forEach(item=>{
 
 const scrollDown = document.querySelector(".scroll-down");
 
-if(scrollDown){
+if (scrollDown) {
 
-    scrollDown.addEventListener("click",()=>{
+    scrollDown.addEventListener("click", () => {
 
         const story = document.querySelector("#story");
 
-        if(!story) return;
+        if (!story) return;
 
-        const headerHeight = document.querySelector("header").offsetHeight;
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.offsetHeight : 0;
 
         const position =
-            story.getBoundingClientRect().top
-            + window.pageYOffset
-            - headerHeight
-            - 0;
+            story.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight;
 
         window.scrollTo({
-
-            top:position,
-
-            behavior:"smooth"
-
-        });
-
-    });
-
-}
-
-
-
-//==============================
-// Back To Top Smooth
-//==============================
-
-const topBtn = document.getElementById("topButton");
-
-if(topBtn){
-
-    topBtn.addEventListener("click",()=>{
-
-        window.scrollTo({
-
-            top:0,
-
-            behavior:"smooth"
-
+            top: position,
+            behavior: "smooth"
         });
 
     });

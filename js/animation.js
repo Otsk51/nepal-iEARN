@@ -3,35 +3,26 @@
 //==============================
 
 const animatedItems = document.querySelectorAll(
-
     ".fade-up, .fade-left, .fade-right, .zoom"
-
 );
 
-const observer = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(entry.isIntersecting){
-
+        if (entry.isIntersecting) {
             entry.target.classList.add("show");
-
         }
 
     });
 
-},{
-
-    threshold:0.15
-
+}, {
+    threshold: 0.15
 });
 
-animatedItems.forEach(item=>{
-
+animatedItems.forEach(item => {
     observer.observe(item);
-
 });
-
 
 
 //==============================
@@ -40,48 +31,33 @@ animatedItems.forEach(item=>{
 
 const galleryItems = document.querySelectorAll(".gallery-grid img");
 
-galleryItems.forEach((img,index)=>{
+galleryItems.forEach((img, index) => {
 
-    img.style.transitionDelay = `${index*0.08}s`;
-
-});
-
-
-
-//==============================
-// Timeline Animation
-//==============================
-
-const timelineItems = document.querySelectorAll(".timeline-item");
-
-timelineItems.forEach(item=>{
-
-    observer.observe(item);
+    img.style.transitionDelay = `${index * 0.08}s`;
 
 });
-
 
 
 //==============================
 // Gallery Hover Zoom
 //==============================
 
-galleryItems.forEach(img=>{
+// PCだけホバー拡大
+if (window.matchMedia("(min-width: 769px)").matches) {
 
-    img.addEventListener("mouseenter",()=>{
+    galleryItems.forEach(img => {
 
-        img.style.transform="scale(1.06)";
+        img.addEventListener("mouseenter", () => {
+            img.style.transform = "scale(1.06)";
+        });
+
+        img.addEventListener("mouseleave", () => {
+            img.style.transform = "scale(1)";
+        });
 
     });
 
-    img.addEventListener("mouseleave",()=>{
-
-        img.style.transform="scale(1)";
-
-    });
-
-});
-
+}
 
 
 //==============================
@@ -90,8 +66,6 @@ galleryItems.forEach(img=>{
 
 const festival = document.querySelector(".festival");
 
-if(festival){
-
+if (festival) {
     observer.observe(festival);
-
 }

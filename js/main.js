@@ -4,19 +4,19 @@
 
 const header = document.querySelector("header");
 
-window.addEventListener("scroll", () => {
+if (header) {
 
-    if(window.scrollY > 80){
+    window.addEventListener("scroll", () => {
 
-        header.classList.add("scrolled");
+        if (window.scrollY > 80) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
 
-    }else{
+    });
 
-        header.classList.remove("scrolled");
-
-    }
-
-});
+}
 
 
 //==============================
@@ -25,31 +25,31 @@ window.addEventListener("scroll", () => {
 
 const topButton = document.getElementById("topButton");
 
-window.addEventListener("scroll",()=>{
+if (topButton) {
 
-    if(window.scrollY > 500){
+    // 最初は非表示
+    topButton.style.display = "none";
 
-        topButton.style.display="flex";
+    window.addEventListener("scroll", () => {
 
-    }else{
-
-        topButton.style.display="none";
-
-    }
-
-});
-
-topButton.addEventListener("click",()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
+        if (window.scrollY > 500) {
+            topButton.style.display = "flex";
+        } else {
+            topButton.style.display = "none";
+        }
 
     });
 
-});
+    topButton.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
 
 
 //==============================
@@ -57,43 +57,32 @@ topButton.addEventListener("click",()=>{
 //==============================
 
 const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("#navMenu a");
 
-const navLinks = document.querySelectorAll("nav a");
+window.addEventListener("scroll", () => {
 
-window.addEventListener("scroll",()=>{
+    let current = "";
 
-    let current="";
+    sections.forEach(section => {
 
-    sections.forEach(section=>{
+        if (!section.id) return;
 
-        const sectionTop = section.offsetTop-120;
+        const sectionTop = section.offsetTop - 120;
 
-        if(window.scrollY >= sectionTop){
-
-            current = section.getAttribute("id");
-
+        if (window.scrollY >= sectionTop) {
+            current = section.id;
         }
 
     });
 
-    navLinks.forEach(link=>{
+    navLinks.forEach(link => {
 
         link.classList.remove("active");
 
-        if(link.getAttribute("href")==="#"+current){
-
+        if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
-
         }
 
     });
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navMenu = document.getElementById("navMenu");
-
-    menuBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-    navMenu.classList.toggle("active");
 });
