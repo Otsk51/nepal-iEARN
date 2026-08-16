@@ -279,3 +279,29 @@ header.scrolled .menu-btn span{
     display: block;
     white-space: nowrap;
 }
+
+/*======================================
+        HEADER - ALL HORIZONTAL
+======================================*/
+
+.header-container {
+    flex-direction: row !important;
+}
+
+#navMenu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 30px;
+    background: transparent !important;
+}
+
+#navMenu a {
+    white-space: nowrap;
+}
+
+/* ナビの黒背景を消す */
+nav {
+    background: transparent !important;
+}
